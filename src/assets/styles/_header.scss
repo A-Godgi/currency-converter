@@ -1,0 +1,20 @@
+.container {
+	display: flex;
+	flex: 1;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.bage-panel {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.add-container {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	justify-content: center;
+}

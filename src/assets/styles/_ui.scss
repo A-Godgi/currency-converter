@@ -1,0 +1,55 @@
+.select {
+	display: inline-block;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+.card {
+	height: 36px;
+	background-color: $secondary-color;
+	display: flex;
+	justify-content: space-between;
+	gap: 6px;
+	align-items: center;
+	border-radius: 12px;
+	padding: 12px;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.btn {
+	display: inline-block;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	height: 28px;
+	padding: 0 12px;
+	background-color: $primary-color;
+	color: white;
+}
+
+.disable {
+	background-color: $gray-color;
+	cursor: not-allowed;
+}
+
+.danger {
+	background-color: $danger-color;
+	color: white;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.loader {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
