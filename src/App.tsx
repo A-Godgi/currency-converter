@@ -38,7 +38,7 @@ function App() {
 						currenciesList={currenciesList}
 					/>
 				) : isLoadingRates ? (
-					'Loading...'
+					<div className='loader'>Loading...</div>
 				) : (
 					<ExchangeRate
 						handleEdit={handleEdit}
