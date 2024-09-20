@@ -3,6 +3,11 @@
 A simple React project for converting currencies.
 The project was done as a test task for a vacancy.
 
+## Demo
+![ ](https://github.com/A-Godgi/currency-converter/blob/master/demo.gif)
+[https://a-godgi.github.io/currency-converter/](https://a-godgi.github.io/currency-converter/)
+
+
 ## Technologies
 
 - React
