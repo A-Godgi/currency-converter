@@ -2,7 +2,7 @@ import useFetch from './useFetch'
 import { fetchAllExchangeRates, getCurrencies } from '../services/api'
 import { useEffect, useState } from 'react'
 import { Currency } from '../types'
-import { getSelectedCurrenciesFromStore } from '../services/selectedCurrencies'
+import { getSelectedCurrenciesFromStorage } from '../services/getSelectedCurrenciesFromStorage'
 import { getCurrenciesList } from '../services/getCurrenciesList'
 
 export const useHandleRequests = () => {
@@ -12,7 +12,7 @@ export const useHandleRequests = () => {
 	)
 	const [currenciesList, setCurrenciesList] = useState<Currency[]>([])
 	const [selectedCurrencies, setSelectedCurrencies] = useState<Currency[]>(
-		getSelectedCurrenciesFromStore(),
+		getSelectedCurrenciesFromStorage(),
 	)
 
 	//API
