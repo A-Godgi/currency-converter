@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# Test Task React Currency Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React project for converting currencies.
+The project was done as a test task for a vacancy.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- React
+- TypeScript
+- HTML
+- SCSS
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository: `git clone https://github.com/A-Godgi/currency-converter.git`
+2. Navigate to the project directory: `cd currency-converter`
+3. Install dependencies: `npm install`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+Run the following command to start the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm start
+```
 
-### `npm run build`
+Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project follows a standard React application structure:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+├── public/                             <- Contains static assets like HTML files, images, and the favicon.
+├── src/                                <- Contains the source code for the React application.
+│   ├── assets/                         <- Contains assets like images and styles.
+│   │   └── styles/                     <- Contains SCSS files for styling the application.
+│   │       ├── _base.scss              <- Base styles for the application.
+│   │       ├── _header.scss            <- Styles for the layout header.
+│   │       ├── _layout.scss            <- Styles for the main layout.
+│   │       ├── _pallette.scss          <- Color palette for the application.
+│   │       ├── _ui.scss                <- Styles for UI elements.
+│   │       └── main.scss               <- Main SCSS file that imports all other styles.
+│   ├── components/                     <- Contains React components for the currency converter.
+│   │   ├── ConverterElement.tsx        <- One currency converter element.
+│   │   ├── EditPanel.tsx               <- Component for editing selected currencies.
+│   │   └── ExchangeRate.tsx            <- Component for displaying exchange rates.
+│   ├── constants/                      <- Contains project-specific constants.
+│   │   └── index.ts                    <- Main file exporting constants.
+│   ├── hooks/                          <- Contains custom React hooks.
+│   │   ├── useFetch.ts                 <- Custom hook for handle fetch data.
+│   │   ├── useHandleRequest.ts         <- Custom hook for handling request logic.
+│   │   └── useHandleConvert.ts         <- Custom hook for handling conversion logic.
+│   ├── pages/                          <- Contains React components for the pages of the application.
+│   │   └── Converter.tsx               <- Main page of the application.
+│   ├── services/                       <- Contains services for fetching data.
+│   │   ├── api.ts                      <- Service for fetching data from the API.
+│   │   ├── getCurrenciesList.ts        <- Service for handle currencies list.
+│   │   └── getSelectedCurrenciesFromStorage.ts <- Service for getting selected currencies from the localstorage.
+│   ├── types/                          <- Contains TypeScript types and interfaces.
+│   │   └── index.ts                    <- Main file exporting types and interfaces.
+│   ├── ui/                             <- Contains reusable UI components.
+│   │   ├── Card.tsx                    <- Card component.
+│   │   ├── ConverterSelect.tsx         <- Select component for the currency converter.
+│   │   ├── EditableCard.tsx            <- Editable card component.
+│   │   ├── Layout.tsx                  <- Layout component.
+│   │   └── SelectFromAll.tsx           <- Select component for selecting from all currencies.
+│   ├── App.tsx                         <- Main React component that integrates other components to create the app.
+│   └── index.tsx                       <- Entry point for the React app.
+├── .gitignore                          <- Specifies files and directories that should be ignored by version control.
+├── package.json                        <- Configuration file that includes project dependencies and scripts.
+├── package-lock.json                   <- Auto-generated file describing the exact tree that was generated for the node_modules folder.
+├── README.md                           <- Documentation file providing information about the project.
+├── tsconfig.json                       <- TypeScript configuration file.
+├── .prettierrc                         <- Prettier configuration file.
+├── eslint.config.mjs                   <- ESLint configuration file.
+└── webpack.config.js                   <- Webpack configuration file.
+```
 
-### `npm run eject`
+## Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The BigNumber.js library is used. This is justified by the need to work with large numbers and high precision calculations, which is especially important in financial applications, such as a currency converter. In JavaScript, the built-in number types (Number) have limitations in terms of precision and range, which can lead to errors when working with very large or very small numbers.
