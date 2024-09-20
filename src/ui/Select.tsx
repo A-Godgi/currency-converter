@@ -23,7 +23,7 @@ const Select: React.FC<Props> = ({
 		<select
 			className="select"
 			onChange={handleChange}
-			defaultValue={selectedCurrencies[0].value}
+			defaultValue={selectedCurrencies.length ? selectedCurrencies[0].value : ''}
 		>
 			{currenciesList.map((currency: Currency) => (
 				<option
