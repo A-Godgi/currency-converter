@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Select from '../ui/Select'
+import SelectFromAll from '../ui/SelectFromAll'
 import { Currency } from '../types'
 import EditableCard from '../ui/EditableCard'
 
@@ -18,7 +18,7 @@ const EditPanel: React.FC<Props> = ({
 
 	return (
 		<div className="container">
-			<div className="bage-panel">
+			<div className="badge-panel">
 				{interimList.map(({ value, label }) => (
 					<EditableCard
 						label={label}
@@ -29,9 +29,9 @@ const EditPanel: React.FC<Props> = ({
 					/>
 				))}
 			</div>
-			<div className="add-container">
+			<div className="column-container">
 				Add currency:
-				<Select
+				<SelectFromAll
 					selectedCurrencies={interimList}
 					setSelectedCurrencies={setInterimList}
 					currenciesList={currenciesList}

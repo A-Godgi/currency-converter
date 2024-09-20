@@ -6,6 +6,18 @@
 	font-size: 16px;
 	line-height: 1.5;
 	cursor: pointer;
+	width: 100%;
+}
+
+.input {
+	display: inline-block;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 1.5;
+	width: 100%;
+	padding: 0 6px;
 }
 
 .card {
@@ -44,6 +56,10 @@
 
 .bold {
 	font-weight: bold;
+}
+
+.m-12 {
+	margin: 12px;
 }
 
 .loader {

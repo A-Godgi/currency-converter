@@ -24,7 +24,7 @@ const ExchangeRate: React.FC<Props> = ({
 
 	return (
 		<div className="container">
-			<div className="bage-panel">
+			<div className="badge-panel">
 				{rates &&
 					selectedCurrencies
 						.filter((i) => i.value !== baseCurrency)
@@ -32,7 +32,7 @@ const ExchangeRate: React.FC<Props> = ({
 							<Card label={label} value={getPrice(value)} key={value + label} />
 						))}
 			</div>
-			<div className="add-container">
+			<div className="column-container">
 				<button onClick={handleEdit} className="btn">
 					Edit
 				</button>

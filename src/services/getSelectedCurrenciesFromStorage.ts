@@ -1,6 +1,6 @@
 import { Currency } from '../types'
 
-export const getSelectedCurrenciesFromStore = (): Currency[] => {
+export const getSelectedCurrenciesFromStorage = (): Currency[] => {
 	const selectedCurrencies = localStorage.getItem('selectedCurrencies')
 	const defaultCurrencies = [
 		{ value: 'uah', label: 'Ukrainian Hryvnia' },
