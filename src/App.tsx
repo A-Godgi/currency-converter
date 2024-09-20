@@ -1,7 +1,7 @@
 import React from 'react'
 import './assets/styles/main.scss'
 import Layout from './ui/Layout'
-import HomePage from './pages/HomePage'
+import Converter from './pages/Converter'
 import { Currency } from './types'
 import ExchangeRate from './components/ExchangeRate'
 import EditPanel from './components/EditPanel'
@@ -38,7 +38,7 @@ function App() {
 						currenciesList={currenciesList}
 					/>
 				) : isLoadingRates ? (
-					<div className='loader'>Loading...</div>
+					<div className="loader">Loading...</div>
 				) : (
 					<ExchangeRate
 						handleEdit={handleEdit}
@@ -48,7 +48,12 @@ function App() {
 				)
 			}
 		>
-			<HomePage />
+			{!isLoadingRates && dataRates && (
+				<Converter
+					dataRates={dataRates}
+					selectedCurrencies={selectedCurrencies}
+				/>
+			)}
 		</Layout>
 	)
 }
