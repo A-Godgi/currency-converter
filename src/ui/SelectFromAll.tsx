@@ -21,7 +21,7 @@ const SelectFromAll: React.FC<Props> = ({
 	}
 
 	return (
-		currenciesList.length && (
+		currenciesList.length ? (
 			<select
 				className="select"
 				onChange={handleChange}
@@ -41,7 +41,7 @@ const SelectFromAll: React.FC<Props> = ({
 					</option>
 				))}
 			</select>
-		)
+		) : null
 	)
 }
 
